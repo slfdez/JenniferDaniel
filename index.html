@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Irene & Cesar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Didact+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/YouTubePopUp.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="envelope-screen">
+        <!-- Fondo animado -->
+        <div class="animated-bg">
+            <div class="photo-track">
+                <img src="images3/Foto_ceremonia.jpg" />
+                <img src="images3/foto_cuenta_regresiv_a.jpg" />
+                <img src="images3/Foto_esperamos_verte.jpg" />
+                <img src="images3/foto_feliz_pareja.jpg" />
+                <img src="images3/Foto_hemos_reservado.jpg" />
+                <img src="images3/foto_ovalo.jpg" />
+                <img src="images3/Foto_portada.png" />
+                <img src="images3/Foto_sesion_compromiso.png" />
+
+                <img src="images3/Foto_ceremonia.jpg" />
+                <img src="images3/foto_cuenta_regresiv_a.jpg" />
+                <img src="images3/Foto_esperamos_verte.jpg" />
+                <img src="images3/foto_feliz_pareja.jpg" />
+                <img src="images3/Foto_hemos_reservado.jpg" />
+                <img src="images3/foto_ovalo.jpg" />
+                <img src="images3/Foto_portada.png" />
+                <img src="images3/Foto_sesion_compromiso.png" />
+
+            </div>
+        </div>
+
+        <!-- Texto y sobre -->
+        <div class="overlay-text">
+            <br><br>
+            <h1 style="font-size: 120px;">Daniel y Jennifer</h1>
+            <p style="font-size: 35px;">10 de Marzo de 2025</p>
+            <span class="tap-hint">Toque el sobre para abrir</span>
+        </div>
+        <img src="images3/sobre-realista.png" alt="Sobre de invitación" class="envelope-img" />
+    </div>
+
+</body>
+<script>
+window.addEventListener("load", function () {
+  const envelopeImg = document.querySelector(".envelope-img");
+  const envelopeScreen = document.getElementById("envelope-screen");
+
+  envelopeImg.addEventListener("click", function () {
+    this.classList.add("zoom-out");
+
+    setTimeout(() => {
+      envelopeScreen.style.opacity = "0";
+    }, 600);
+
+    setTimeout(() => {
+      // 👉 Leer parámetro inv y redirigir al main correcto
+      const params = new URLSearchParams(window.location.search);
+      const inv = params.get("inv") || "default"; // si no viene, va a un main "default"
+      window.location.href = `main${inv}.html`;
+    }, 1600);
+  });
+});
+</script>
+
+</html>

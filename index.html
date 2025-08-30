@@ -69,7 +69,7 @@ window.addEventListener("load", function () {
     setTimeout(() => {
       // 👉 Leer parámetro inv y redirigir al main correcto
       const params = new URLSearchParams(window.location.search);
-      const inv = params.get("inv") || "default"; // si no viene, va a un main "default"
+      const inv = params.get("inv") || "1"; // si no viene, va a un main "default"
       window.location.href = `main${inv}.html`;
     }, 1600);
   });
